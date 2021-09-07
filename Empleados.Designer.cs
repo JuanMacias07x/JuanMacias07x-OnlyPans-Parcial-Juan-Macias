@@ -43,6 +43,7 @@ namespace OnlyPans
             this.tBcantidad = new System.Windows.Forms.TextBox();
             this.tBVentasP = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.Dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.gBPanes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,11 +176,19 @@ namespace OnlyPans
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
+            // Dtpfecha
+            // 
+            this.Dtpfecha.Location = new System.Drawing.Point(525, 13);
+            this.Dtpfecha.Name = "Dtpfecha";
+            this.Dtpfecha.Size = new System.Drawing.Size(265, 27);
+            this.Dtpfecha.TabIndex = 14;
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Dtpfecha);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.tBVentasP);
             this.Controls.Add(this.tBcantidad);
@@ -216,5 +225,6 @@ namespace OnlyPans
         private System.Windows.Forms.TextBox tBcantidad;
         private System.Windows.Forms.TextBox tBVentasP;
         private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.DateTimePicker Dtpfecha;
     }
 }

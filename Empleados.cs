@@ -36,35 +36,31 @@ namespace OnlyPans
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             double cantidad = 0.0;
-            double cantidadpa = 0.0;
-            double cantidadpn = 0.0;
-            double cantidadpe = 0.0;
             string panes = "";
 
+            panes = tBNombre.Text + "con identificación:" + TbId.Text + "compró" + "\r\n" ;
 
             cantidad = Convert.ToDouble(tBcantidad.Text);
-            cantidadpa = Convert.ToDouble(tBcantidad.Text);
-            cantidadpn = Convert.ToDouble(tBcantidad.Text);
-            cantidadpe = Convert.ToDouble(tBcantidad.Text);
 
             if (chBpa.Checked == true)
             {
-                cantidadpa = cantidad * 1000.0 ;
-                panes = " Ha llevado $" + cantidadpa + " de pan aliñado " + "\r\n";
+                cantidad = cantidad * 1000.0 ;
+                panes = "Ha comprado" + cantidad + "de pan" + "\r\n";
 
             }
             if (chBpn.Checked == true)
             {
-                cantidadpn = cantidad * 500.0 ;
-                panes = " Ha llevado " + cantidadpn + " de pan no aliñado " +  "\r\n";
+                cantidad = cantidad * 500.0 ;
+                panes = "Ha comprado" + cantidad + "de pan" + "\r\n";
             }
             if (chBpe.Checked == true)
             {
-                cantidadpe = cantidad * 2000.0 ;
-                panes = " Ha llevado " + cantidadpe + " de pan especial " +  "\r\n";
+                cantidad = cantidad * 2000.0 ;
+                panes = "Ha comprado" + cantidad + "de pan" + "\r\n";
             }
 
-            panes = "La persona: " + tBNombre.Text + " con identificación: " + TbId.Text + " compró " + "\r\n";
+            panes = tBNombre.Text + " , con identificación: " + TbId.Text + " . Compró $ " + cantidad + " de pan " 
+                + " .El día " + Dtpfecha.Text + "\r\n";
             tBVentasP.Text = panes;
    
 
