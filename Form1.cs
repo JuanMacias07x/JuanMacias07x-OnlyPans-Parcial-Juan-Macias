@@ -29,9 +29,15 @@ namespace OnlyPans
 
         private void bntIngresar_Click(object sender, EventArgs e)
         {
+            if (this.tBUser.Text == "empleado" && this.tBPssw.Text == "1234")
+            {
+                Empleados llamar = new Empleados();
+                llamar.ShowDialog();
+            }
+            
             if (this.tBUser.Text == "admin" && this.tBPssw.Text == "admin")
             {
-                
+                MessageBox.Show("El total de ventas fue: $");
             }
         }
     }
