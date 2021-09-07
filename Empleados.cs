@@ -24,8 +24,10 @@ namespace OnlyPans
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-                    
+            VentasEmpleados vender = new VentasEmpleados(tBVentasP.Text);
+
+            vender.Show();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -42,24 +44,24 @@ namespace OnlyPans
 
             cantidad = Convert.ToDouble(tBcantidad.Text);
 
-            if (chBpa.Checked == true)
+            if (rbpa.Checked == true)
             {
                 cantidad = cantidad * 1000.0 ;
                 panes = "Ha comprado" + cantidad + "de pan" + "\r\n";
 
             }
-            if (chBpn.Checked == true)
+            if (rbpn.Checked == true)
             {
                 cantidad = cantidad * 500.0 ;
                 panes = "Ha comprado" + cantidad + "de pan" + "\r\n";
             }
-            if (chBpe.Checked == true)
+            if (rbpe.Checked == true)
             {
                 cantidad = cantidad * 2000.0 ;
                 panes = "Ha comprado" + cantidad + "de pan" + "\r\n";
             }
 
-            panes = tBNombre.Text + " , con identificación: " + TbId.Text + " . Compró $ " + cantidad + " de pan " 
+            panes = tBNombre.Text + ", con identificación: " + TbId.Text + ". Compró $ " + cantidad + " de pan " 
                 + " .El día " + Dtpfecha.Text + "\r\n";
             tBVentasP.Text = panes;
    

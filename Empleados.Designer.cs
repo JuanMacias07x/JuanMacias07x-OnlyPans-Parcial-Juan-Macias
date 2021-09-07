@@ -34,9 +34,6 @@ namespace OnlyPans
             this.TbId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.gBPanes = new System.Windows.Forms.GroupBox();
-            this.chBpe = new System.Windows.Forms.CheckBox();
-            this.chBpn = new System.Windows.Forms.CheckBox();
-            this.chBpa = new System.Windows.Forms.CheckBox();
             this.btnCerrarEmp = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
@@ -44,6 +41,9 @@ namespace OnlyPans
             this.tBVentasP = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.Dtpfecha = new System.Windows.Forms.DateTimePicker();
+            this.rbpa = new System.Windows.Forms.RadioButton();
+            this.rbpn = new System.Windows.Forms.RadioButton();
+            this.rbpe = new System.Windows.Forms.RadioButton();
             this.gBPanes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,45 +81,15 @@ namespace OnlyPans
             // 
             // gBPanes
             // 
-            this.gBPanes.Controls.Add(this.chBpe);
-            this.gBPanes.Controls.Add(this.chBpn);
-            this.gBPanes.Controls.Add(this.chBpa);
+            this.gBPanes.Controls.Add(this.rbpe);
+            this.gBPanes.Controls.Add(this.rbpn);
+            this.gBPanes.Controls.Add(this.rbpa);
             this.gBPanes.Location = new System.Drawing.Point(21, 98);
             this.gBPanes.Name = "gBPanes";
             this.gBPanes.Size = new System.Drawing.Size(171, 174);
             this.gBPanes.TabIndex = 7;
             this.gBPanes.TabStop = false;
             this.gBPanes.Text = "Tipo de pan";
-            // 
-            // chBpe
-            // 
-            this.chBpe.AutoSize = true;
-            this.chBpe.Location = new System.Drawing.Point(20, 128);
-            this.chBpe.Name = "chBpe";
-            this.chBpe.Size = new System.Drawing.Size(112, 24);
-            this.chBpe.TabIndex = 10;
-            this.chBpe.Text = "Pan especial";
-            this.chBpe.UseVisualStyleBackColor = true;
-            // 
-            // chBpn
-            // 
-            this.chBpn.AutoSize = true;
-            this.chBpn.Location = new System.Drawing.Point(20, 84);
-            this.chBpn.Name = "chBpn";
-            this.chBpn.Size = new System.Drawing.Size(129, 24);
-            this.chBpn.TabIndex = 9;
-            this.chBpn.Text = "Pan no aliñado";
-            this.chBpn.UseVisualStyleBackColor = true;
-            // 
-            // chBpa
-            // 
-            this.chBpa.AutoSize = true;
-            this.chBpa.Location = new System.Drawing.Point(20, 41);
-            this.chBpa.Name = "chBpa";
-            this.chBpa.Size = new System.Drawing.Size(108, 24);
-            this.chBpa.TabIndex = 8;
-            this.chBpa.Text = "Pan aliñado";
-            this.chBpa.UseVisualStyleBackColor = true;
             // 
             // btnCerrarEmp
             // 
@@ -183,6 +153,39 @@ namespace OnlyPans
             this.Dtpfecha.Size = new System.Drawing.Size(265, 27);
             this.Dtpfecha.TabIndex = 14;
             // 
+            // rbpa
+            // 
+            this.rbpa.AutoSize = true;
+            this.rbpa.Location = new System.Drawing.Point(23, 42);
+            this.rbpa.Name = "rbpa";
+            this.rbpa.Size = new System.Drawing.Size(107, 24);
+            this.rbpa.TabIndex = 0;
+            this.rbpa.TabStop = true;
+            this.rbpa.Text = "Pan aliñado";
+            this.rbpa.UseVisualStyleBackColor = true;
+            // 
+            // rbpn
+            // 
+            this.rbpn.AutoSize = true;
+            this.rbpn.Location = new System.Drawing.Point(23, 83);
+            this.rbpn.Name = "rbpn";
+            this.rbpn.Size = new System.Drawing.Size(128, 24);
+            this.rbpn.TabIndex = 1;
+            this.rbpn.TabStop = true;
+            this.rbpn.Text = "Pan no aliñado";
+            this.rbpn.UseVisualStyleBackColor = true;
+            // 
+            // rbpe
+            // 
+            this.rbpe.AutoSize = true;
+            this.rbpe.Location = new System.Drawing.Point(23, 126);
+            this.rbpe.Name = "rbpe";
+            this.rbpe.Size = new System.Drawing.Size(111, 24);
+            this.rbpe.TabIndex = 2;
+            this.rbpe.TabStop = true;
+            this.rbpe.Text = "Pan especial";
+            this.rbpe.UseVisualStyleBackColor = true;
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -216,9 +219,6 @@ namespace OnlyPans
         private System.Windows.Forms.TextBox TbId;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.GroupBox gBPanes;
-        private System.Windows.Forms.CheckBox chBpe;
-        private System.Windows.Forms.CheckBox chBpn;
-        private System.Windows.Forms.CheckBox chBpa;
         private System.Windows.Forms.Button btnCerrarEmp;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Label lblCantidad;
@@ -226,5 +226,8 @@ namespace OnlyPans
         private System.Windows.Forms.TextBox tBVentasP;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.DateTimePicker Dtpfecha;
+        private System.Windows.Forms.RadioButton rbpe;
+        private System.Windows.Forms.RadioButton rbpn;
+        private System.Windows.Forms.RadioButton rbpa;
     }
 }

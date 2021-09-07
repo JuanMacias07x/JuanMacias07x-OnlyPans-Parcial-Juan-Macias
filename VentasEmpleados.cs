@@ -12,9 +12,10 @@ namespace OnlyPans
 {
     public partial class VentasEmpleados : Form
     {
-        public VentasEmpleados()
+        public VentasEmpleados(string RMsg)
         {
             InitializeComponent();
+            tbVenta.Text = RMsg;
         }
 
         private void btnCerrarVenta_Click(object sender, EventArgs e)
