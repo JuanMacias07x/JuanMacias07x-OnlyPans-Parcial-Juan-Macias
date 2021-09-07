@@ -30,13 +30,17 @@ namespace OnlyPans
         private void InitializeComponent()
         {
             this.lblNombre = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tBNombre = new System.Windows.Forms.TextBox();
+            this.TbId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
-            this.rbPa = new System.Windows.Forms.RadioButton();
-            this.rbPn = new System.Windows.Forms.RadioButton();
-            this.rbPe = new System.Windows.Forms.RadioButton();
             this.gBPanes = new System.Windows.Forms.GroupBox();
+            this.chBpe = new System.Windows.Forms.CheckBox();
+            this.chBpn = new System.Windows.Forms.CheckBox();
+            this.chBpa = new System.Windows.Forms.CheckBox();
+            this.btnCerrarEmp = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.tBcantidad = new System.Windows.Forms.TextBox();
             this.gBPanes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,19 +53,19 @@ namespace OnlyPans
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
-            // textBox1
+            // tBNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 27);
-            this.textBox1.TabIndex = 1;
+            this.tBNombre.Location = new System.Drawing.Point(73, 12);
+            this.tBNombre.Name = "tBNombre";
+            this.tBNombre.Size = new System.Drawing.Size(168, 27);
+            this.tBNombre.TabIndex = 1;
             // 
-            // textBox2
+            // TbId
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 27);
-            this.textBox2.TabIndex = 3;
+            this.TbId.Location = new System.Drawing.Point(319, 15);
+            this.TbId.Name = "TbId";
+            this.TbId.Size = new System.Drawing.Size(168, 27);
+            this.TbId.TabIndex = 3;
             // 
             // lblId
             // 
@@ -72,60 +76,98 @@ namespace OnlyPans
             this.lblId.TabIndex = 2;
             this.lblId.Text = "Cédula:";
             // 
-            // rbPa
-            // 
-            this.rbPa.AutoSize = true;
-            this.rbPa.Location = new System.Drawing.Point(44, 43);
-            this.rbPa.Name = "rbPa";
-            this.rbPa.Size = new System.Drawing.Size(107, 24);
-            this.rbPa.TabIndex = 4;
-            this.rbPa.TabStop = true;
-            this.rbPa.Text = "Pan aliñado";
-            this.rbPa.UseVisualStyleBackColor = true;
-            // 
-            // rbPn
-            // 
-            this.rbPn.AutoSize = true;
-            this.rbPn.Location = new System.Drawing.Point(44, 89);
-            this.rbPn.Name = "rbPn";
-            this.rbPn.Size = new System.Drawing.Size(128, 24);
-            this.rbPn.TabIndex = 5;
-            this.rbPn.TabStop = true;
-            this.rbPn.Text = "Pan no aliñado";
-            this.rbPn.UseVisualStyleBackColor = true;
-            // 
-            // rbPe
-            // 
-            this.rbPe.AutoSize = true;
-            this.rbPe.Location = new System.Drawing.Point(44, 133);
-            this.rbPe.Name = "rbPe";
-            this.rbPe.Size = new System.Drawing.Size(111, 24);
-            this.rbPe.TabIndex = 6;
-            this.rbPe.TabStop = true;
-            this.rbPe.Text = "Pan especial";
-            this.rbPe.UseVisualStyleBackColor = true;
-            // 
             // gBPanes
             // 
-            this.gBPanes.Controls.Add(this.rbPe);
-            this.gBPanes.Controls.Add(this.rbPn);
-            this.gBPanes.Controls.Add(this.rbPa);
-            this.gBPanes.Location = new System.Drawing.Point(12, 82);
+            this.gBPanes.Controls.Add(this.chBpe);
+            this.gBPanes.Controls.Add(this.chBpn);
+            this.gBPanes.Controls.Add(this.chBpa);
+            this.gBPanes.Location = new System.Drawing.Point(21, 98);
             this.gBPanes.Name = "gBPanes";
             this.gBPanes.Size = new System.Drawing.Size(171, 174);
             this.gBPanes.TabIndex = 7;
             this.gBPanes.TabStop = false;
             this.gBPanes.Text = "Tipo de pan";
             // 
+            // chBpe
+            // 
+            this.chBpe.AutoSize = true;
+            this.chBpe.Location = new System.Drawing.Point(20, 128);
+            this.chBpe.Name = "chBpe";
+            this.chBpe.Size = new System.Drawing.Size(112, 24);
+            this.chBpe.TabIndex = 10;
+            this.chBpe.Text = "Pan especial";
+            this.chBpe.UseVisualStyleBackColor = true;
+            // 
+            // chBpn
+            // 
+            this.chBpn.AutoSize = true;
+            this.chBpn.Location = new System.Drawing.Point(20, 84);
+            this.chBpn.Name = "chBpn";
+            this.chBpn.Size = new System.Drawing.Size(129, 24);
+            this.chBpn.TabIndex = 9;
+            this.chBpn.Text = "Pan no aliñado";
+            this.chBpn.UseVisualStyleBackColor = true;
+            // 
+            // chBpa
+            // 
+            this.chBpa.AutoSize = true;
+            this.chBpa.Location = new System.Drawing.Point(20, 41);
+            this.chBpa.Name = "chBpa";
+            this.chBpa.Size = new System.Drawing.Size(108, 24);
+            this.chBpa.TabIndex = 8;
+            this.chBpa.Text = "Pan aliñado";
+            this.chBpa.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarEmp
+            // 
+            this.btnCerrarEmp.Location = new System.Drawing.Point(405, 372);
+            this.btnCerrarEmp.Name = "btnCerrarEmp";
+            this.btnCerrarEmp.Size = new System.Drawing.Size(183, 48);
+            this.btnCerrarEmp.TabIndex = 8;
+            this.btnCerrarEmp.Text = "Cerrar";
+            this.btnCerrarEmp.UseVisualStyleBackColor = true;
+            this.btnCerrarEmp.Click += new System.EventHandler(this.btnCerrarEmp_Click);
+            // 
+            // btnVender
+            // 
+            this.btnVender.Location = new System.Drawing.Point(194, 372);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(183, 48);
+            this.btnVender.TabIndex = 9;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(220, 139);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(70, 20);
+            this.lblCantidad.TabIndex = 10;
+            this.lblCantidad.Text = "cantidad:";
+            this.lblCantidad.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // tBcantidad
+            // 
+            this.tBcantidad.Location = new System.Drawing.Point(221, 172);
+            this.tBcantidad.Name = "tBcantidad";
+            this.tBcantidad.Size = new System.Drawing.Size(68, 27);
+            this.tBcantidad.TabIndex = 11;
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tBcantidad);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.btnVender);
+            this.Controls.Add(this.btnCerrarEmp);
             this.Controls.Add(this.gBPanes);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TbId);
             this.Controls.Add(this.lblId);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tBNombre);
             this.Controls.Add(this.lblNombre);
             this.Name = "Empleados";
             this.Text = "Empleados";
@@ -139,12 +181,16 @@ namespace OnlyPans
         #endregion
 
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tBNombre;
+        private System.Windows.Forms.TextBox TbId;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.RadioButton rbPa;
-        private System.Windows.Forms.RadioButton rbPn;
-        private System.Windows.Forms.RadioButton rbPe;
         private System.Windows.Forms.GroupBox gBPanes;
+        private System.Windows.Forms.CheckBox chBpe;
+        private System.Windows.Forms.CheckBox chBpn;
+        private System.Windows.Forms.CheckBox chBpa;
+        private System.Windows.Forms.Button btnCerrarEmp;
+        private System.Windows.Forms.Button btnVender;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.TextBox tBcantidad;
     }
 }
