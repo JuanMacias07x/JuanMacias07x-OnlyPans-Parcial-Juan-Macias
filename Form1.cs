@@ -10,12 +10,29 @@ using System.Windows.Forms;
 
 namespace OnlyPans
 {
-    public partial class Form1 : Form
+    public partial class OnlyPans : Form
     {
-        public Form1()
+        public OnlyPans()
         {
             InitializeComponent();
         }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntIngresar_Click(object sender, EventArgs e)
+        {
+            if (this.tBUser.Text == "admin" && this.tBPssw.Text == "admin")
+            {
+                
+            }
+        }
     }
 }
