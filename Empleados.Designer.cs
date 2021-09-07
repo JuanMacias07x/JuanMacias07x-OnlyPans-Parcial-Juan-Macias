@@ -34,16 +34,16 @@ namespace OnlyPans
             this.TbId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.gBPanes = new System.Windows.Forms.GroupBox();
+            this.rbpe = new System.Windows.Forms.RadioButton();
+            this.rbpn = new System.Windows.Forms.RadioButton();
+            this.rbpa = new System.Windows.Forms.RadioButton();
             this.btnCerrarEmp = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.tBcantidad = new System.Windows.Forms.TextBox();
-            this.tBVentasP = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.Dtpfecha = new System.Windows.Forms.DateTimePicker();
-            this.rbpa = new System.Windows.Forms.RadioButton();
-            this.rbpn = new System.Windows.Forms.RadioButton();
-            this.rbpe = new System.Windows.Forms.RadioButton();
+            this.rtxbVentasP = new System.Windows.Forms.RichTextBox();
             this.gBPanes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +91,39 @@ namespace OnlyPans
             this.gBPanes.TabStop = false;
             this.gBPanes.Text = "Tipo de pan";
             // 
+            // rbpe
+            // 
+            this.rbpe.AutoSize = true;
+            this.rbpe.Location = new System.Drawing.Point(23, 126);
+            this.rbpe.Name = "rbpe";
+            this.rbpe.Size = new System.Drawing.Size(111, 24);
+            this.rbpe.TabIndex = 2;
+            this.rbpe.TabStop = true;
+            this.rbpe.Text = "Pan especial";
+            this.rbpe.UseVisualStyleBackColor = true;
+            // 
+            // rbpn
+            // 
+            this.rbpn.AutoSize = true;
+            this.rbpn.Location = new System.Drawing.Point(23, 83);
+            this.rbpn.Name = "rbpn";
+            this.rbpn.Size = new System.Drawing.Size(128, 24);
+            this.rbpn.TabIndex = 1;
+            this.rbpn.TabStop = true;
+            this.rbpn.Text = "Pan no aliñado";
+            this.rbpn.UseVisualStyleBackColor = true;
+            // 
+            // rbpa
+            // 
+            this.rbpa.AutoSize = true;
+            this.rbpa.Location = new System.Drawing.Point(23, 42);
+            this.rbpa.Name = "rbpa";
+            this.rbpa.Size = new System.Drawing.Size(107, 24);
+            this.rbpa.TabIndex = 0;
+            this.rbpa.TabStop = true;
+            this.rbpa.Text = "Pan aliñado";
+            this.rbpa.UseVisualStyleBackColor = true;
+            // 
             // btnCerrarEmp
             // 
             this.btnCerrarEmp.Location = new System.Drawing.Point(405, 372);
@@ -128,14 +161,6 @@ namespace OnlyPans
             this.tBcantidad.Size = new System.Drawing.Size(68, 27);
             this.tBcantidad.TabIndex = 11;
             // 
-            // tBVentasP
-            // 
-            this.tBVentasP.Location = new System.Drawing.Point(355, 105);
-            this.tBVentasP.Multiline = true;
-            this.tBVentasP.Name = "tBVentasP";
-            this.tBVentasP.Size = new System.Drawing.Size(433, 234);
-            this.tBVentasP.TabIndex = 12;
-            // 
             // btnCalcular
             // 
             this.btnCalcular.Location = new System.Drawing.Point(222, 202);
@@ -153,47 +178,24 @@ namespace OnlyPans
             this.Dtpfecha.Size = new System.Drawing.Size(265, 27);
             this.Dtpfecha.TabIndex = 14;
             // 
-            // rbpa
+            // rtxbVentasP
             // 
-            this.rbpa.AutoSize = true;
-            this.rbpa.Location = new System.Drawing.Point(23, 42);
-            this.rbpa.Name = "rbpa";
-            this.rbpa.Size = new System.Drawing.Size(107, 24);
-            this.rbpa.TabIndex = 0;
-            this.rbpa.TabStop = true;
-            this.rbpa.Text = "Pan aliñado";
-            this.rbpa.UseVisualStyleBackColor = true;
-            // 
-            // rbpn
-            // 
-            this.rbpn.AutoSize = true;
-            this.rbpn.Location = new System.Drawing.Point(23, 83);
-            this.rbpn.Name = "rbpn";
-            this.rbpn.Size = new System.Drawing.Size(128, 24);
-            this.rbpn.TabIndex = 1;
-            this.rbpn.TabStop = true;
-            this.rbpn.Text = "Pan no aliñado";
-            this.rbpn.UseVisualStyleBackColor = true;
-            // 
-            // rbpe
-            // 
-            this.rbpe.AutoSize = true;
-            this.rbpe.Location = new System.Drawing.Point(23, 126);
-            this.rbpe.Name = "rbpe";
-            this.rbpe.Size = new System.Drawing.Size(111, 24);
-            this.rbpe.TabIndex = 2;
-            this.rbpe.TabStop = true;
-            this.rbpe.Text = "Pan especial";
-            this.rbpe.UseVisualStyleBackColor = true;
+            this.rtxbVentasP.Location = new System.Drawing.Point(405, 98);
+            this.rtxbVentasP.Name = "rtxbVentasP";
+            this.rtxbVentasP.ReadOnly = true;
+            this.rtxbVentasP.Size = new System.Drawing.Size(384, 249);
+            this.rtxbVentasP.TabIndex = 15;
+            this.rtxbVentasP.Text = "";
+            this.rtxbVentasP.TextChanged += new System.EventHandler(this.rtxbVentasP_TextChanged);
             // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rtxbVentasP);
             this.Controls.Add(this.Dtpfecha);
             this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.tBVentasP);
             this.Controls.Add(this.tBcantidad);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnVender);
@@ -223,11 +225,11 @@ namespace OnlyPans
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox tBcantidad;
-        private System.Windows.Forms.TextBox tBVentasP;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.DateTimePicker Dtpfecha;
         private System.Windows.Forms.RadioButton rbpe;
         private System.Windows.Forms.RadioButton rbpn;
         private System.Windows.Forms.RadioButton rbpa;
+        private System.Windows.Forms.RichTextBox rtxbVentasP;
     }
 }

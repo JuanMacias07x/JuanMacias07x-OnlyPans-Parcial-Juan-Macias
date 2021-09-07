@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace OnlyPans
 {
@@ -37,7 +38,11 @@ namespace OnlyPans
             
             if (this.tBUser.Text == "admin" && this.tBPssw.Text == "admin")
             {
-                MessageBox.Show("El total de ventas fue: $");
+                Admin entrar = new Admin();
+                entrar.ShowDialog();
+            }
+            {
+                
             }
         }
     }

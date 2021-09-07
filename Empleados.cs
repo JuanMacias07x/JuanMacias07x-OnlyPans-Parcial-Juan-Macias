@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace OnlyPans
 {
@@ -24,7 +25,7 @@ namespace OnlyPans
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VentasEmpleados vender = new VentasEmpleados(tBVentasP.Text);
+            VentasEmpleados vender = new VentasEmpleados(rtxbVentasP.Text);
 
             vender.Show();
 
@@ -35,7 +36,7 @@ namespace OnlyPans
 
         }
 
-        private void btnCalcular_Click(object sender, EventArgs e)
+        public void btnCalcular_Click(object sender, EventArgs e)
         {
             double cantidad = 0.0;
             string panes = "";
@@ -63,12 +64,31 @@ namespace OnlyPans
 
             panes = tBNombre.Text + ", con identificación: " + TbId.Text + ". Compró $ " + cantidad + " de pan " 
                 + " .El día " + Dtpfecha.Text + "\r\n";
-            tBVentasP.Text = panes;
-   
+            rtxbVentasP.Text = panes;
 
+            { 
+               
+                SaveFileDialog guardar = new SaveFileDialog();
+                guardar.Filter = "Documento de texto|*.txt";
+                guardar.Title = "Guardar RtB";
+                guardar.FileName = "Sin título 1";
+                var resultado = guardar.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    StreamWriter escribir = new StreamWriter(guardar.FileName);
+                    foreach (object line in rtxbVentasP.Lines)
+                    {
+                        escribir.WriteLine(line);
+                    }
+                    escribir.Close();
+                }
+            }
            
         }
 
-        
+        public void rtxbVentasP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
