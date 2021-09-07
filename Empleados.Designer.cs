@@ -41,6 +41,7 @@ namespace OnlyPans
             this.btnVender = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.tBcantidad = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gBPanes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,7 +142,7 @@ namespace OnlyPans
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(220, 139);
+            this.lblCantidad.Location = new System.Drawing.Point(217, 139);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(70, 20);
             this.lblCantidad.TabIndex = 10;
@@ -150,16 +151,25 @@ namespace OnlyPans
             // 
             // tBcantidad
             // 
-            this.tBcantidad.Location = new System.Drawing.Point(221, 172);
+            this.tBcantidad.Location = new System.Drawing.Point(220, 162);
             this.tBcantidad.Name = "tBcantidad";
             this.tBcantidad.Size = new System.Drawing.Size(68, 27);
             this.tBcantidad.TabIndex = 11;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(355, 105);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(433, 234);
+            this.textBox1.TabIndex = 12;
             // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tBcantidad);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnVender);
@@ -192,5 +202,6 @@ namespace OnlyPans
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox tBcantidad;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
