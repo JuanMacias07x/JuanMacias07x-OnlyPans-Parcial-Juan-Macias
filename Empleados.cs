@@ -24,26 +24,7 @@ namespace OnlyPans
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double cantidad = 0.0;
-            string panes = "";
-
-            cantidad = Convert.ToDouble(tBcantidad.Text);
-
-            if (chBpa.Checked == true)
-            {
-                cantidad = cantidad * 1000.0;
             
-            }
-            if(chBpn.Checked == true)
-            {
-                cantidad = cantidad * 500.0;
-            }
-            if (chBpe.Checked == true)
-            {
-                cantidad = cantidad * 2000.0;
-            }
-
-            panes += "El valor total es de: " + cantidad.ToString();
                     
         }
 
@@ -51,5 +32,45 @@ namespace OnlyPans
         {
 
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            double cantidad = 0.0;
+            double cantidadpa = 0.0;
+            double cantidadpn = 0.0;
+            double cantidadpe = 0.0;
+            string panes = "";
+
+
+            cantidad = Convert.ToDouble(tBcantidad.Text);
+            cantidadpa = Convert.ToDouble(tBcantidad.Text);
+            cantidadpn = Convert.ToDouble(tBcantidad.Text);
+            cantidadpe = Convert.ToDouble(tBcantidad.Text);
+
+            if (chBpa.Checked == true)
+            {
+                cantidadpa = cantidad * 1000.0 ;
+                panes = " Ha llevado $" + cantidadpa + " de pan aliñado " + "\r\n";
+
+            }
+            if (chBpn.Checked == true)
+            {
+                cantidadpn = cantidad * 500.0 ;
+                panes = " Ha llevado " + cantidadpn + " de pan no aliñado " +  "\r\n";
+            }
+            if (chBpe.Checked == true)
+            {
+                cantidadpe = cantidad * 2000.0 ;
+                panes = " Ha llevado " + cantidadpe + " de pan especial " +  "\r\n";
+            }
+
+            panes = "La persona: " + tBNombre.Text + " con identificación: " + TbId.Text + " compró " + "\r\n";
+            tBVentasP.Text = panes;
+   
+
+           
+        }
+
+        
     }
 }
