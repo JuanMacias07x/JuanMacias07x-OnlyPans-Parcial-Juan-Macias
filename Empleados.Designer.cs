@@ -62,6 +62,7 @@ namespace OnlyPans
             this.tBNombre.Name = "tBNombre";
             this.tBNombre.Size = new System.Drawing.Size(168, 27);
             this.tBNombre.TabIndex = 1;
+            this.tBNombre.TextChanged += new System.EventHandler(this.tBNombre_TextChanged);
             // 
             // TbId
             // 
@@ -90,6 +91,7 @@ namespace OnlyPans
             this.gBPanes.TabIndex = 7;
             this.gBPanes.TabStop = false;
             this.gBPanes.Text = "Tipo de pan";
+            this.gBPanes.Enter += new System.EventHandler(this.gBPanes_Enter);
             // 
             // rbpe
             // 

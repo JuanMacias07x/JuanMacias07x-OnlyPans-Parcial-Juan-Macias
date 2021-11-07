@@ -90,5 +90,15 @@ namespace OnlyPans
         {
 
         }
+
+        private void tBNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gBPanes_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
